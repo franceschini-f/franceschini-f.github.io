@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="./assets/favicon3.ico"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&display=swap" rel="stylesheet">
+        <title>P9s4 material</title>
+        <style>
+            h2 {
+                font-size: 23px;
+                color: green;
+                margin-block: 35px 16px; 
+            }
+
+            body {
+                font-size: 19px;
+                font-family: Roboto, aptos, sans-serif;
+                padding: 5px 50px 5px 50px;
+            }
+                    
+            p {
+                margin-block: 0px 25px;
+                padding: 0;
+            }
+        
+            ul {
+                margin: 0px;
+            }
+                        
+            li {
+                line-height: 1;
+                margin-block: 0px 25px;
+            }
+
+            br {
+                display: block;
+                margin: 7px;
+            }
+        </style>
+    </head>
+
+<div id="form" style="display: block; margin: 50px;">
+    <input type="password" id="pInput" placeholder="Scrivi qui">
+    <button onclick="spara()">Invia</button>
+</div>
+
+        <body id="contenuto">
+            <div id="content" style="display: none;">
+                <h1>P9 (GRINS), spoke 4: <a href="https://liveunibo-my.sharepoint.com/:f:/g/personal/f_franceschini_unibo_it/Er8c4R_H8TFLllkU2VQPuekBTA05AhkCJn8OgQieeCV3GA?e=pRkhYP">shared material</a> directory</h1>
+
+                <h2>Deliverables</h2>
+                <ul>
+                    <li><a href="https://liveunibo-my.sharepoint.com/:b:/g/personal/f_franceschini_unibo_it/ET-mHfIGdX9IonymDTdsrhQBF4NtpewRccwO1rHZl_-5Dg?e=sd6ecX">Climate Finance Introduction</a> <br> An introduction to the issue of climate from an economic point of view, especially focused on the pricing on financial markets. </li>
+                    <li><a href="https://liveunibo-my.sharepoint.com/:x:/g/personal/f_franceschini_unibo_it/EZy6CneUivlGvzr3sFIz27oBs-j-OeVc-lBMcaeAu8xkcg?e=gcOxdi">Data list</a> <br> A searchable list of climate-relevant datasets and databases.</li>
+                </ul>
+    
+    
+                <h2>Libraries</h2>
+                <ul>
+                    <li><a href="https://liveunibo-my.sharepoint.com/:f:/g/personal/f_franceschini_unibo_it/ElCvqyjt3gpPkBcKUY0-lUcBWmtii8WtK6_ZdsqylMlp_Q?e=GMP0oA">Scientific literature</a></li>
+                    <li><a href="https://liveunibo-my.sharepoint.com/:f:/g/personal/f_franceschini_unibo_it/EvC5Q3FAAflEjgrd9uY4dd8B6p2tk1QqCrfHXK5ieXmjjQ?e=hg0CSR">Data repository</a></li>
+                </ul>
+    
+    
+                <h2>Projects</h2>
+    
+                <div style="margin-left: 30px;">
+                    <p>Research Project #1: greenness-risk interdependence [<a href="https://liveunibo-my.sharepoint.com/:b:/g/personal/f_franceschini_unibo_it/ESHNHzpx5cFAuppUGfg2ThEBbFePYUZDZEDWiLsBx9EBhw?e=Hf6S60">Paper</a>] [<a href="https://liveunibo-my.sharepoint.com/:b:/g/personal/f_franceschini_unibo_it/EeDyQ4-a6bhKp6AILfa2KkQBikvnPQ-aqARPRygSDcizWw?e=q7VgHF">Old presentation</a>]</p>
+                    <p>Other projects [<a href="https://liveunibo-my.sharepoint.com/:b:/g/personal/f_franceschini_unibo_it/EShkQVeTGedLugtpLMc77bQBzmXN-2dYXJMRRAz-tMv_Ww?e=nV5vGw">Ideas' summaries</a>]</p>
+                </div>  
+                
+                <div style="margin-top: 30px;">
+                    <a href="https://liveunibo-my.sharepoint.com/:t:/g/personal/f_franceschini_unibo_it/ES65K4MGOt5FtC3Wx_lKmMsBqF8CvBIF6SN_QztXneO4wg?e=MELXcM" style="font-weight: bold; font-size: larger;">FF timeline</a>
+                </div>
+
+            </div> 
+
+            <script>
+                
+                var pInput = document.getElementById("pInput");
+
+                pInput.addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                        spara();
+                    }
+                    });
+
+                function spara() {
+                    var sword = pInput.value;
+                    var og = "metrics23";
+                        
+                    if (sword === og) {
+                        document.getElementById("content").style.display = "block";
+                        document.getElementById("form").style.display = "none";
+                    }
+                }
+            </script>
+        </body>
+    </html>
