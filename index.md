@@ -48,8 +48,8 @@ I am an applied financial economist, fascinated by economic growth, the natural 
 * Organizer of the DSE Reading Group in Macro-Finance
 
 <!-- 2023-24: Research Fellowship at <span class = "locit">University of Bologna</span> (IT), supervisor: G. Cavaliere <br> -->
-2022-23: Visiting Student at <span class = "locit">London Business School</span> (UK), sponsor: H. Kung <br>
-2020-21: Visiting Student (virtual) at <span class = "locit">Bocconi University</span> (IT), sponsor: M.M. Croce <br>
+2023: Visiting Student at <span class = "locit">London Business School</span> (UK), sponsor: H. Kung <br>
+2021: Visiting Student (virtual) at <span class = "locit">Bocconi University</span> (IT), sponsor: M.M. Croce <br>
 2020: Visiting Student (virtual) at <span class = "locit">Vienna Graduate School of Finance</span> (AT), sponsor: C. Wagner <br>
 
 <br>
@@ -94,9 +94,9 @@ Institutional email: <span class="addrtxt">f.franceschini -> unibo.it</span>
 
 [SSRN](https://ssrn.com/author=2836171) <br>
 
-[LinkedIn](https://www.linkedin.com/in/fabio-frn/?locale=en_US) <br>
+[LinkedIn](https://www.linkedin.com/in/frn-fab/?locale=en_US) <br>
 
-[Twitter](https://twitter.com/Fab_Frn) <br>
+[Twitter](https://twitter.com/Frn_Fab) <br>
 
 
 ## References
