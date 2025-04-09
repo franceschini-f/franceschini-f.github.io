@@ -88,7 +88,7 @@ I am an applied financial economist, fascinated by economic growth, the natural 
 
 
 # Contacts
-Office: Room 7 – Piazza Scaravilli 1, 40126 Bologna, Italy <br> <!-- (former DiSA library) -->
+Office: Piazza Scaravilli 2, 40126 Bologna, Italy <br> <!-- (former DiSA library) -->
 
 Institutional email: <span class="addrtxt">f.franceschini -> unibo.it</span>
 
