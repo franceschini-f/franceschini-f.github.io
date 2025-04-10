@@ -99,6 +99,8 @@ Institutional email: <span class="addrtxt">f.franceschini -> unibo.it</span>
 
 [LinkedIn](https://www.linkedin.com/in/frn-fab/?locale=en_US) <br>
 
+[Mastodon](https://mastodon.social/@franceschini_f) <br>
+
 [Twitter](https://twitter.com/Frn_Fab) <br>
 
 
