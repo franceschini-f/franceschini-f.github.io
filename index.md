@@ -95,7 +95,7 @@ Institutional email: <span class="addrtxt">f.franceschini -> unibo.it</span>
 <!-- [SSRN Author page](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2836171) <br> -->
 [Institutional webpage](https://www.unibo.it/sitoweb/f.franceschini/en) <br>
 
-[ORCID](https://orcid.org/my-orcid?orcid=0000-0003-2827-8023) <br>
+[ORCID](https://orcid.org/0000-0003-2827-8023) <br>
 
 [SSRN](https://ssrn.com/author=2836171) <br>
 
