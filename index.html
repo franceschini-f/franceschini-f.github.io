@@ -532,6 +532,21 @@
             .section-nav {
                 flex-wrap: wrap;
                 gap: 1rem;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background-color: white;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+
+        /* Stacked view mode (both mobile and narrow desktop) */
+        @media (max-width: calc(390px + (390px * 1.618))) {
+            .reference-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
         }
 
