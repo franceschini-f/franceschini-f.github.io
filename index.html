@@ -916,6 +916,12 @@
             const sections = document.querySelectorAll('.section');
             const navLinks = document.querySelectorAll('.section-nav a');
             
+            // If we're at the top of the page, remove all active classes
+            if (window.scrollY === 0) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                return;
+            }
+            
             sections.forEach(section => {
                 const rect = section.getBoundingClientRect();
                 // Check if section top is near the top of viewport (with offset for nav)
