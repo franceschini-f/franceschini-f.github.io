@@ -69,6 +69,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900 -->
+    <!-- Courier Prime -->
     <title>Fabio Franceschini | Finance and Macroeconomics</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
@@ -277,22 +278,22 @@
 
         /* Sections */
         .section {
-            margin-bottom: 1rem;
-            scroll-margin-top: 80px;  /* Restore original value */
+            margin-bottom: 4rem;  /* Increased from 1rem for better section separation */
+            padding-top: 1.6rem;  /* Increased from 1rem for better spacing before title */
+            scroll-margin-top: 80px;
             min-height: 50vh;
-            padding-top: 20px;  /* Restore original padding */
         }
 
         .section h2 {
+            margin-top: 0;        /* No top margin since section has padding */
+            margin-bottom: 1rem;  /* Reduced from 2rem for better spacing after title */
             font-family: 'Roboto', sans-serif;
-            font-size: 1.6rem;
-            font-weight: bold;
-            color: rgb(3, 18, 31);
-            margin-top: 1.6rem;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.3rem;
-            background-color: transparent;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #333;
+            background-color: white;
+            position: relative;
+            z-index: 1;
         }
 
         .section h3 {
@@ -301,25 +302,28 @@
             font-weight: 500;
             font-size: 1.6rem;
             color: #1c4587;
-            margin-bottom: 0.5rem;
+            margin-top: 1.6rem;   /* Consistent with section spacing */
+            margin-bottom: 0.5rem;  /* Increased from 0.5rem for better spacing before content */
             text-align: center;
         }
 
         /* First h3 should have less top margin */
         .section h3:first-of-type {
-            margin-top: 1.5rem;
+            margin-top: 1rem;     /* Reduced from 1.6rem for first subsection */
         }
 
         .intro-text {
             padding: 1.4rem 0;
             line-height: 1.6;
             color: #333;
+            margin-bottom: 1.2rem;  /* Added margin to separate from next section */
         }
 
         /* Paper items */
         .paper {
             padding: 1rem;
             background-color: #fff;
+            margin-top: 0;        /* Removed margin since h3 has proper spacing */
         }
 
         .paper-title {
@@ -371,8 +375,9 @@
 
         /* Education items */
         .education-entry {
-            padding: 1.5rem;
+            padding: 1.5rem 1.5rem 0 1.5rem;
             background-color: #fff;
+            margin-top: 0;        /* Removed margin since h3 has proper spacing */
         }
 
         .education-year {
@@ -592,7 +597,7 @@
         }
 
         .institution-courses {
-            padding: 1.5rem;
+            padding: 0.5rem 1.5rem 1.5rem 1.5rem;
             margin-bottom: 2rem;
         }
 
@@ -677,7 +682,7 @@
         <section id="research" class="section">
             <h2>Research</h2>
 
-            I am an applied financial economist, fascinated by economic growth, the natural environment, and the act of lending. My research investigates aggregate phenomena related to these themes by analyzing financial data with statistical tools such as cointegration models and dimension-reduction techniques.
+            <div style="padding-bottom: 1rem;">I am an applied financial economist, fascinated by economic growth, the natural environment, and the act of lending. My research investigates aggregate phenomena related to these themes by analyzing financial data with statistical tools such as cointegration models and dimension-reduction techniques.</div>
             <!-- <div class="intro-text">
             </div> -->
 
@@ -739,249 +744,250 @@
             <div class="paper">
                 <div class="paper-title">The Long-Run Temperature Risk Component</div>
             </div>
-
-            <!-- Education Section -->
-            <section id="education" class="section">
-                <h2>Education</h2>
-                
-                <div class="education-entry">
-                    <div class="education-year">2024</div>
-                    <div class="education-title">PhD in Economics</div>
-                    <div class="education-institution">University of Bologna (IT)</div>
-                    <div class="education-details">
-                        <ul>
-                            <li>Advisors: <span class="advisor-name">M. Gonzalez-Eiras</span> (U of Bologna) and <span class="advisor-name">M.M. Croce</span> (Bocconi U)</li>
-                            <li>PhD students' representative in the Council of Department</li>
-                            <li>Organizer of the DSE Reading Group in Macro-Finance</li>
-                        </ul>
-                        <div class="visiting-position">
-                            <div class="education-year">2023</div>
-                            <div class="education-institution">London Business School (UK)</div>
-                            <div>Visiting Student, sponsor: H. Kung</div>
-                        </div>
-                        <div class="visiting-position">
-                            <div class="education-year">2021</div>
-                            <div class="education-institution">Bocconi University (IT)</div>
-                            <div>Visiting Student (virtual), sponsor: M.M. Croce</div>
-                        </div>
-                        <div class="visiting-position">
-                            <div class="education-year">2020</div>
-                            <div class="education-institution">Vienna Graduate School of Finance (AT)</div>
-                            <div>Visiting Student (virtual), sponsor: C. Wagner</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="education-entry">
-                    <div class="education-year">2018</div>
-                    <div class="education-title">MSc in Advanced Economics and Finance</div>
-                    <div class="education-institution">Copenhagen Business School (DK)</div>
-                    <div class="visiting-position">
-                        <div class="education-year">2017</div>
-                        <div class="education-institution">Copenhagen University (DK)</div>
-                        <div>Credit Student</div>
-                    </div>
-                </div>
-
-                <div class="education-entry">
-                    <div class="education-year">2016</div>
-                    <div class="education-title">BSc in Business Administration</div>
-                    <div class="education-institution">University of Bologna (IT)</div>
-                </div>
-
-                <div class="education-entry">
-                    <div class="education-year">2013</div>
-                    <div class="education-title">HSD in Mechanical Engineering</div>
-                    <div class="education-institution">I.I.S. Aldini Valeriani (Bologna, IT)</div>
-                </div>
-            </section>
-
-            <!-- Teaching Section -->
-            <section id="teaching" class="section">
-                <h2>Teaching</h2>
-                
-                <h3>At University of Bologna (IT)</h3>
-                <div class="institution-courses">
-                    <div class="course-entry">
-                        <div class="course-year">2022-25:</div>
-                        <div>
-                            <span class="course-title">Asset Pricing</span>
-                            <span class="course-info">(Grad), TA to Prof. M. Gonzalez-Eiras</span>
-                        </div>
-                    </div>
-                    
-                    <div class="course-entry">
-                        <div class="course-year">2024-25:</div>
-                        <div>
-                            <span class="course-title">Financial Econometrics</span>
-                            <span class="course-info">(Grad), TA to Prof. G. Moramarco</span>
-                        </div>
-                    </div>
-                    
-                    <div class="course-entry">
-                        <div class="course-year">2021:</div>
-                        <div>
-                            <span class="course-title">Asset Pricing</span>
-                            <span class="course-info">(Grad), TA to Prof. G. Camera</span>
-                        </div>
-                    </div>
-                    
-                    <div class="course-entry">
-                        <div class="course-year">2020:</div>
-                        <div>
-                            <span class="course-title">Financial Instruments and Markets</span>
-                            <span class="course-info">(UndGrad), TA to Prof. G. Camera</span>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>At Copenhagen Business School (DK)</h3>
-                <div class="institution-courses">
-                    <div class="course-entry">
-                        <div class="course-year">2018:</div>
-                        <div>
-                            <span class="course-title">Macroeconomics 2</span>
-                            <span class="course-info">(UndGrad), TA to Prof. A. Sørensen</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2>Contact</h2>
-                <div class="contact-item">
-                    <p>Office: Piazza Scaravilli 2, 40126 Bologna, Italy</p>
-                    <p>Institutional email: <span class="monospace-inline">f.franceschini -> unibo.it</span></p>
-                    
-                    <div class="contact-links">
-                        <a href="https://www.unibo.it/sitoweb/f.franceschini/en">Institutional webpage</a>
-                        <a href="https://orcid.org/0000-0003-2827-8023">ORCID</a>
-                        <a href="https://ssrn.com/author=2836171">SSRN</a>
-                        <a href="https://www.linkedin.com/in/frn-fab/?locale=en_US">LinkedIn</a>
-                        <a href="https://mastodon.social/@franceschini_f">Mastodon</a>
-                        <a href="https://twitter.com/Frn_Fab">Twitter</a>
-                    </div>
-                </div>
-
-                <h3>References</h3>
-                <div class="reference-grid">
-                    <div class="reference-item">
-                        <div class="reference-name">Martin Gonzalez-Eiras</div>
-                        <div class="reference-title">Associate Professor</div>
-                        <div class="reference-institution">University of Bologna</div>
-                    </div>
-
-                    <div class="reference-item">
-                        <div class="reference-name">Mariano Massimiliano Croce</div>
-                        <div class="reference-title">Professor of Finance</div>
-                        <div class="reference-institution">Bocconi University</div>
-                    </div>
-
-                    <div class="reference-item">
-                        <div class="reference-name">Giuseppe Cavaliere</div>
-                        <div class="reference-title">Full Professor</div>
-                        <div class="reference-institution">University of Bologna</div>
-                    </div>
-                </div>
-            </section>
-
         </section>
 
-        <hr class="footer-divider">
-        <img src="assets/img/oibafox.png" alt="Footer decoration" class="footer-image">
-    </div>
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2>Education</h2>
+            
+            <div class="education-entry">
+                <div class="education-year">2024</div>
+                <div class="education-title">PhD in Economics</div>
+                <div class="education-institution">University of Bologna (IT)</div>
+                <div class="education-details">
+                    <ul>
+                        <li>Advisors: <span class="advisor-name">M. Gonzalez-Eiras</span> (U of Bologna) and <span class="advisor-name">M.M. Croce</span> (Bocconi U)</li>
+                        <li>PhD students' representative in the Council of Department</li>
+                        <li>Organizer of the DSE Reading Group in Macro-Finance</li>
+                    </ul>
+                    <div class="visiting-position">
+                        <div class="education-year">2023</div>
+                        <div class="education-institution">London Business School (UK)</div>
+                        <div>Visiting Student, sponsor: H. Kung</div>
+                    </div>
+                    <div class="visiting-position">
+                        <div class="education-year">2021</div>
+                        <div class="education-institution">Bocconi University (IT)</div>
+                        <div>Visiting Student (virtual), sponsor: M.M. Croce</div>
+                    </div>
+                    <div class="visiting-position">
+                        <div class="education-year">2020</div>
+                        <div class="education-institution">Vienna Graduate School of Finance (AT)</div>
+                        <div>Visiting Student (virtual), sponsor: C. Wagner</div>
+                    </div>
+                </div>
+            </div>
 
-    <script>
-        // Function to generate navigation from h2 elements
-        function generateNavigation() {
-            const nav = document.querySelector('.section-nav');
-            const sections = document.querySelectorAll('.section h2');
+            <div class="education-entry">
+                <div class="education-year">2018</div>
+                <div class="education-title">MSc in Advanced Economics and Finance</div>
+                <div class="education-institution">Copenhagen Business School (DK)</div>
+                <div class="visiting-position">
+                    <div class="education-year">2017</div>
+                    <div class="education-institution">Copenhagen University (DK)</div>
+                    <div>Credit Student</div>
+                </div>
+            </div>
+
+            <div class="education-entry">
+                <div class="education-year">2016</div>
+                <div class="education-title">BSc in Business Administration</div>
+                <div class="education-institution">University of Bologna (IT)</div>
+            </div>
+
+            <div class="education-entry">
+                <div class="education-year">2013</div>
+                <div class="education-title">HSD in Mechanical Engineering</div>
+                <div class="education-institution">I.I.S. Aldini Valeriani (Bologna, IT)</div>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="section">
+            <h2>Teaching</h2>
             
-            // Clear existing navigation
-            nav.innerHTML = '';
-            
-            // Create navigation links for each section
-            sections.forEach(section => {
-                const sectionId = section.parentElement.id;
-                const sectionTitle = section.textContent;
-                const link = document.createElement('a');
-                link.href = `#${sectionId}`;
-                link.textContent = sectionTitle;
-                nav.appendChild(link);
-            });
+            <h3>At University of Bologna (IT)</h3>
+            <div class="institution-courses">
+                <div class="course-entry">
+                    <div class="course-year">2022-25:</div>
+                    <div>
+                        <span class="course-title">Asset Pricing</span>
+                        <span class="course-info">(Grad), TA to Prof. M. Gonzalez-Eiras</span>
+                    </div>
+                </div>
+                
+                <div class="course-entry">
+                    <div class="course-year">2024-25:</div>
+                    <div>
+                        <span class="course-title">Financial Econometrics</span>
+                        <span class="course-info">(Grad), TA to Prof. G. Moramarco</span>
+                    </div>
+                </div>
+                
+                <div class="course-entry">
+                    <div class="course-year">2021:</div>
+                    <div>
+                        <span class="course-title">Asset Pricing</span>
+                        <span class="course-info">(Grad), TA to Prof. G. Camera</span>
+                    </div>
+                </div>
+                
+                <div class="course-entry">
+                    <div class="course-year">2020:</div>
+                    <div>
+                        <span class="course-title">Financial Instruments and Markets</span>
+                        <span class="course-info">(UndGrad), TA to Prof. G. Camera</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3>At Copenhagen Business School (DK)</h3>
+            <div class="institution-courses">
+                <div class="course-entry">
+                    <div class="course-year">2018:</div>
+                    <div>
+                        <span class="course-title">Macroeconomics 2</span>
+                        <span class="course-info">(UndGrad), TA to Prof. A. Sørensen</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-item">
+                <p>Office: Piazza Scaravilli 2, 40126 Bologna, Italy</p>
+                <p>Institutional email: <span class="monospace-inline">f.franceschini -> unibo.it</span></p>
+                
+                <div class="contact-links">
+                    <a href="https://www.unibo.it/sitoweb/f.franceschini/en">Institutional webpage</a>
+                    <a href="https://orcid.org/0000-0003-2827-8023">ORCID</a>
+                    <a href="https://ssrn.com/author=2836171">SSRN</a>
+                    <a href="https://www.linkedin.com/in/frn-fab/?locale=en_US">LinkedIn</a>
+                    <a href="https://mastodon.social/@franceschini_f">Mastodon</a>
+                    <a href="https://twitter.com/Frn_Fab">Twitter</a>
+                </div>
+            </div>
+
+            <h3>References</h3>
+            <div class="reference-grid">
+                <div class="reference-item">
+                    <div class="reference-name">Martin Gonzalez-Eiras</div>
+                    <div class="reference-title">Associate Professor</div>
+                    <div class="reference-institution">University of Bologna</div>
+                </div>
+
+                <div class="reference-item">
+                    <div class="reference-name">Mariano Massimiliano Croce</div>
+                    <div class="reference-title">Professor of Finance</div>
+                    <div class="reference-institution">Bocconi University</div>
+                </div>
+
+                <div class="reference-item">
+                    <div class="reference-name">Giuseppe Cavaliere</div>
+                    <div class="reference-title">Full Professor</div>
+                    <div class="reference-institution">University of Bologna</div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <hr class="footer-divider">
+    <img src="assets/img/oibafox.png" alt="Footer decoration" class="footer-image">
+</div>
+
+<script>
+    // Function to generate navigation from h2 elements
+    function generateNavigation() {
+        const nav = document.querySelector('.section-nav');
+        const sections = document.querySelectorAll('.section h2');
+        
+        // Clear existing navigation
+        nav.innerHTML = '';
+        
+        // Create navigation links for each section
+        sections.forEach(section => {
+            const sectionId = section.parentElement.id;
+            const sectionTitle = section.textContent;
+            const link = document.createElement('a');
+            link.href = `#${sectionId}`;
+            link.textContent = sectionTitle;
+            nav.appendChild(link);
+        });
+    }
+
+    // Function to update active navigation link
+    function updateActiveNav() {
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.section-nav a');
+        
+        // If we're at the top of the page, remove all active classes
+        if (window.scrollY === 0) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            return;
         }
-
-        // Function to update active navigation link
-        function updateActiveNav() {
-            const sections = document.querySelectorAll('.section');
-            const navLinks = document.querySelectorAll('.section-nav a');
-            
-            // If we're at the top of the page, remove all active classes
-            if (window.scrollY === 0) {
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            // Check if section top is near the top of viewport (with offset for nav)
+            if (rect.top <= 150 && rect.bottom > 0) {
                 navLinks.forEach(link => link.classList.remove('active'));
-                return;
+                const correspondingLink = document.querySelector(`a[href="#${section.id}"]`);
+                if (correspondingLink) {
+                    correspondingLink.classList.add('active');
+                }
             }
-            
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                // Check if section top is near the top of viewport (with offset for nav)
-                if (rect.top <= 150 && rect.bottom > 0) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    const correspondingLink = document.querySelector(`a[href="#${section.id}"]`);
-                    if (correspondingLink) {
-                        correspondingLink.classList.add('active');
-                    }
+        });
+    }
+
+    // Add smooth scrolling to nav links
+    function initSmoothScroll() {
+        document.querySelectorAll('.section-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const sectionTitle = targetSection.querySelector('h2');
+                    const offset = sectionTitle ? sectionTitle.offsetHeight + 20 : 0; // Add 20px extra space after title
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop + offset - 60,
+                        behavior: 'smooth'
+                    });
                 }
             });
-        }
-
-        // Add smooth scrolling to nav links
-        function initSmoothScroll() {
-            document.querySelectorAll('.section-nav a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        const sectionTitle = targetSection.querySelector('h2');
-                        const offset = sectionTitle ? sectionTitle.offsetHeight + 20 : 0; // Add 20px extra space after title
-                        
-                        window.scrollTo({
-                            top: targetSection.offsetTop + offset - 60,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Function to handle abstract toggle
-        function initAbstractToggles() {
-            document.querySelectorAll('.abstract-toggle').forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const abstract = this.closest('.paper').querySelector('.paper-abstract');
-                    abstract.classList.toggle('show');
-                });
-            });
-        }
-
-        // Initialize everything when the page loads
-        window.addEventListener('load', () => {
-            generateNavigation();
-            initSmoothScroll();
-            updateActiveNav();
-            initAbstractToggles();
         });
+    }
 
-        // Update active nav on scroll with throttling
-        let isScrolling;
-        window.addEventListener('scroll', function() {
-            window.clearTimeout(isScrolling);
-            isScrolling = setTimeout(updateActiveNav, 10);
+    // Function to handle abstract toggle
+    function initAbstractToggles() {
+        document.querySelectorAll('.abstract-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const abstract = this.closest('.paper').querySelector('.paper-abstract');
+                abstract.classList.toggle('show');
+            });
         });
-    </script>
+    }
+
+    // Initialize everything when the page loads
+    window.addEventListener('load', () => {
+        generateNavigation();
+        initSmoothScroll();
+        updateActiveNav();
+        initAbstractToggles();
+    });
+
+    // Update active nav on scroll with throttling
+    let isScrolling;
+    window.addEventListener('scroll', function() {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(updateActiveNav, 10);
+    });
+</script>
 </body>
 </html> 
