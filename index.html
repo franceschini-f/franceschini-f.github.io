@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- &family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900 -->
+    <title>Fabio Franceschini | Finance and Macroeconomics</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;  /* This sets the base for rem units */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar */
+        .left-sidebar {
+            width: 390px;
+            padding: 1.6rem;
+            position: fixed;
+            height: 100vh;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;  /* Minimum height to prevent content squishing */
+        }
+
+        .name-header {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            font-style: normal;
+            color: rgb(255, 255, 255);
+            /* margin-bottom: 1.5rem; */
+            text-align: center;
+        }
+
+        .name-text {
+            background-color: rgb(3, 18, 31);
+            line-height: 1;
+            padding: 7px 10px;
+            display: inline-block;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 34px;
+            letter-spacing: 0.03em;
+        }
+
+        .name-text-small {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+
+        .profile-pic {
+            width: 93%;
+            height: auto;
+            margin: 0 auto;  /* Center horizontally */
+            display: block;  /* Ensure block display for margin auto to work */
+        }
+
+        .sidebar-content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding-top: calc(33.33% - 6rem);  /* Default to 1/3 position */
+            padding-bottom: 2.5rem;
+            min-height: 150px;
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar-content-wrapper {
+                padding-top: calc(8% - 0.8rem);  /* Compact spacing for smaller screens */
+            }
+        }
+
+        .essential-info {
+            margin-bottom: 0.8rem;  /* Reduced from 1rem */
+        }
+
+        .essential-info p {
+            margin-bottom: 0.4rem;  /* Reduced from 0.5rem */
+            color: #444;
+        }
+        .essential-info p:nth-child(3) {
+            font-family: 'Inconsolata', monospace;
+            font-weight: bold;
+        }
+
+        .download-button {
+            display: block;
+            width: 61.8%;
+            padding: 0.3rem 0.3rem;  /* Slightly reduced from 0.35rem */
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            margin: 0.8rem auto;  /* Reduced from 1rem */
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #e5e5e5;
+        }
+
+        .download-text {
+            display: block;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: -0.2rem;  /* Increased negative margin for tighter text */
+            letter-spacing: 0.05em;
+        }
+
+        .button-text {
+            font-size: 1.1rem;  /* Increased from 0.95rem */
+            font-weight: bold;
+            letter-spacing: 0.08em;
+        }
+
+        .last-updated {
+            position: absolute;
+            bottom: 1.6rem;
+            left: 1.6rem;
+            color: #666;
+            font-size: 0.7rem;
+            font-weight: 300;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 390px;
+            padding: 1rem 2rem 2rem 2rem;  /* Added padding-top */
+            flex-grow: 1;
+            width: calc(390px * 1.618); /* Golden ratio width based on sidebar */
+            max-width: calc(100% - 390px);
+        }
+
+        /* Navigation */
+        .section-nav {
+            position: sticky;
+            top: 1.6rem;
+            background-color: white;
+            margin-bottom: 2rem;
+            display: flex;  /* Restore horizontal layout */
+            padding-top: 3px;
+            padding-bottom: 7px;
+            gap: 1rem;  /* Reduced from 2rem */
+            z-index: 1000;
+            height: calc(1.6rem+10px); /* 1rem+padding */
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Add pseudo-element to cover the space above nav */
+        .section-nav::before {
+            content: '';
+            position: absolute;
+            top: -2rem;  /* Extend up to cover the gap */
+            left: 0;
+            right: 0;
+            height: 2rem;
+            background-color: white;
+            z-index: -1;
+        }
+
+        .section-nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            font-size: 1.6rem;
+            transition: all 0.3s ease;
+            padding: 10px 16px 10px 16px;  /* More padding top, less bottom */
+            border-radius: 0;
+            display: inline-block;
+            line-height: 1;
+            height: 42px;
+            display: flex;
+            align-items: flex-start;  /* Align from top instead of center */
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .section-nav a:hover {
+            color: #1a1a1a;
+            background-color: transparent;
+            font-weight: bold;
+        }
+
+        .section-nav a.active {
+            color: white;
+            background-color: rgb(3, 18, 31);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 1rem;
+            scroll-margin-top: 80px;  /* Restore original value */
+            min-height: 50vh;
+            padding-top: 20px;  /* Restore original padding */
+        }
+
+        .section h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-top: 1.6rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.3rem;
+            background-color: transparent;
+        }
+
+        .section h3 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #1c4587;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        /* First h3 should have less top margin */
+        .section h3:first-of-type {
+            margin-top: 1.5rem;
+        }
+
+        .intro-text {
+            padding: 1.4rem 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Paper items */
+        .paper {
+            padding: 1rem;
+            background-color: #fff;
+        }
+
+        .paper-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-links {
+            margin-top: 0.5rem;
+        }
+
+        .paper-links a {
+            color: #1c4587;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+
+        .paper-coauthors {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .paper-abstract {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8f8f8;
+            border-left: 3px solid #1c4587;
+        }
+
+        .paper-abstract.show {
+            display: block;
+        }
+
+        .paper-metadata {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0.3rem 0;
+        }
+
+        /* Education items */
+        .education-entry {
+            padding: 1.5rem;
+            background-color: #fff;
+        }
+
+        .education-year {
+            color: #444;  /* Darker gray from #666 */
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-institution {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #1c4587;
+            margin-bottom: 0.3rem;
+        }
+
+        .education-details {
+            margin-top: 0.8rem;
+        }
+
+        .education-details ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .education-details li {
+            color: #444;  /* Darker gray from #666 */
+            margin-bottom: 0.3rem;
+        }
+
+        .education-details .advisor-name {
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+
+        .education-details a {
+            color: #1c4587;
+            text-decoration: none;
+        }
+
+        .education-details a:hover {
+            text-decoration: underline;
+        }
+
+        .visiting-position {
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #eee;
+        }
+
+        .visiting-position .education-year {
+            margin-bottom: 0;
+        }
+
+        .visiting-position .education-institution {
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Contact section */
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item p {
+            margin-bottom: 0.5rem;
+            color: #444;  /* Darker gray from #666 */
+        }
+
+        .contact-item p.monospace {
+            font-family: 'Inconsolata', monospace;
+            font-weight: bold;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact-links a {
+            color: #1c4587;
+            text-decoration: none;
+            font-weight: 500;
+            width: fit-content;  /* Make link only as wide as its text */
+        }
+
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .reference-item {
+            margin-bottom: 0;
+        }
+
+        .reference-name {
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 0.1rem;
+            white-space: nowrap;  /* Prevent name wrapping */
+        }
+
+        .reference-title, .reference-institution {
+            color: #444;  /* Darker gray from #666 */
+            font-size: 0.9rem;
+            margin-bottom: 0.1rem;
+            line-height: 1.3;
+            white-space: nowrap;  /* Prevent wrapping */
+        }
+
+        .footer-divider {
+            margin: 3rem 0 2rem 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-image {
+            display: block;
+            margin: 3rem auto 2rem auto;  /* Added top margin */
+            padding: 1rem;
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px), (orientation: portrait) {
+            body {
+                flex-direction: column;
+            }
+
+            .left-sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                max-width: 100%;
+                padding: 1rem;
+            }
+
+            .section-nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 1025px) and (orientation: landscape) {
+            body {
+                display: flex;
+                justify-content: center;
+            }
+
+            .left-sidebar {
+                width: 390px;
+                left: calc((100% - (390px + 624px)) / 2);
+            }
+
+            .main-content {
+                width: 624px;
+                margin-left: calc(390px + ((100% - (390px + 624px)) / 2));
+                padding-right: calc((100% - (390px + 624px)) / 2);
+            }
+        }
+
+        /* Center content when screen is very wide */
+        @media (min-width: calc(390px + (390px * 1.618) + 100px)) {
+            body {
+                justify-content: center;
+            }
+
+            .left-sidebar {
+                left: calc((100% - (390px + (390px * 1.618))) / 2);
+            }
+
+            .main-content {
+                margin-left: calc(390px + ((100% - (390px + (390px * 1.618))) / 2));
+            }
+        }
+
+        .institution-header {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #1c4587;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .institution-courses {
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .course-entry {
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 4.2rem auto;  /* Increased from 3.8rem */
+            gap: 0.7rem;
+            align-items: baseline;
+        }
+
+        .course-entry:last-child {
+            margin-bottom: 0;  /* Remove margin from last entry in group */
+        }
+
+        .course-title {
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-right: 0.5rem;
+        }
+
+        .course-info {
+            color: #444;  /* Darker gray from #666 */
+            font-size: 0.9rem;
+            margin-left: 0.2rem;
+        }
+
+        .course-year {
+            color: #444;  /* Darker gray from #666 */
+            font-size: 0.9rem;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .monospace-inline {
+            font-family: 'Inconsolata', monospace;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .paper-metadata p {
+            color: #444;  /* Darker gray from #666 */
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <div class="left-sidebar">
+        <h1 class="name-header"><span class="name-text">Fabio Franceschini</span></h1>
+        <span class="name-text-small">/'fabjo fran.ʧe'skiːni/</span>
+        <img src="assets/img/pp-1000.png" alt="Fabio Franceschini" class="profile-pic">
+        <div class="sidebar-content-wrapper">
+            <div class="sidebar-content">
+                <div class="essential-info">
+                    <p>Research Fellow @ U of Bologna</p>
+                    <p>Research in macro-finance</p>
+                    <p>franceschini.f -> protonmail.com</p>
+                </div>
+                <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-cv.pdf" class="download-button" target="_blank">
+                    <span class="download-text">Download</span>
+                    <span class="button-text">FULL CV</span>
+                </a>
+            </div>
+        </div>
+        <p class="last-updated">Last updated in April 2025</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Section Navigation -->
+        <nav class="section-nav">
+            <!-- Navigation links will be generated automatically -->
+        </nav>
+
+        <div class="intro-text">
+        Since 2023, I am a Research Fellow at the Economics Department of the University of Bologna (IT).
+        </div>
+
+        <!-- Research Papers Section -->
+        <section id="research" class="section">
+            <h2>Research</h2>
+
+            I am an applied financial economist, fascinated by economic growth, the natural environment, and the act of lending. In my work I study aggregate economic phenomena related to these themes, primarily applying statistical tools, such as cointegration models and dimension-reduction techniques, to financial markets data.
+            <!-- <div class="intro-text">
+            </div> -->
+
+            <h3>Working papers</h3>
+            
+            <div class="paper">
+                <div class="paper-title">The Innovation Long-Run Risk Component [JMP]</div>
+                <!-- <div class="paper-metadata">
+                    <p>with Author 1, Author 2</p>
+                    <p>Journal: Journal Name, Year</p>
+                    <p>Presented at Conference 1, Conference 2</p>
+                </div> -->
+                <div class="paper-links">
+                    <a href="#" class="abstract-toggle">Abstract</a>
+                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-rd_lrr.pdf" target="_blank">Paper</a>
+                    <a href="https://ssrn.com/abstract=5161761">SSRN</a>
+                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/Franceschini-rd_lrr-pres.pdf" target="_blank">Slides</a>
+                </div>
+                <div class="paper-abstract">
+                    This paper provides empirical evidence that fluctuations in aggregate Research and Development (R&D) pose a significant risk for investors, as predicted by the 'long-run risk' literature. The analysis pivots on a definition of R&D intensity that is grounded on a limited set of flexible economic conditions from the endogenous growth literature, where deviations from the equilibrium R&D level are reflected in the error correction term of the cointegration among R&D, total factor productivity, and labor force. In US data, this process exhibits high persistence despite remaining stationary, allowing for reliable demonstration of its strong forecasting power for both productivity and consumption growth. Driving the persistent component shared by these two series, R&D intensity is argued to identify the innovation long-run risk component. This claim finds further empirical validation through evidence that R&D intensity acts as a risk factor associated with a positive risk premium in the cross-section of US stocks, as predicted by theory.
+                </div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title">Does CAPM Overestimate More the Risk or Its Price?</div>
+                <div class="paper-links">
+                    <a href="#" class="abstract-toggle">Abstract</a>
+                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-lra.pdf" target="_blank">Paper</a>
+                    <a href="https://ssrn.com/abstract=5020899">SSRN</a>
+                </div>
+                <div class="paper-abstract">
+                    CAPM is known to empirically underestimate expected returns of low-risk assets and overestimate those with high risk. This paper studies how risks omission and funding tightness jointly contribute to explaining this anomaly, with the former affecting the definition of assets' riskiness and the latter affecting how risk is remunerated. Theoretically, the two effects are shown to counteract each other. Empirically, the spread related to binding leverage constraints is found to be significant at 2% yearly. Nonetheless, average returns of portfolios that exploit this anomaly are found to mostly reflect omitted risks, contrasting how they have been used in previous analysis.
+                </div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title">Are You Betting On Sustainability?</div>
+                <div class="paper-links">
+                    <a href="#" class="abstract-toggle">Abstract</a>
+                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-sust_prem.pdf" target="_blank">Paper</a>
+                </div>
+                <div class="paper-abstract">
+                    When sustainability of assets is appreciated, its effect on the discount rates does not depend on the sustainability of the asset priced only, but it is intrinsically mediated by the risk profile of the asset itself. This has significant implications for the measurement of the actual spreads associated to sustainability concerns in financial markets as well as for hedging changes in the sustainability concerns. Specifically, (1) average returns of long-short portfolios of assets sorted on sustainability can be totally unrelated to the priced spread and (2) the effectiveness of assets in hedging changes to the sustainability concerns will depend on assets' "sustainability intensity" and their risk jointly. The main implications are tested on a ESG score measure for US stocks, revealing, in fact, a detachment between the average excess return of a high-minus-low ESG portfolio and the measured ESG spread.
+                </div>
+            </div>
+
+            <h3>Research in progress</h3>
+
+            <div class="paper">
+                <div class="paper-title">Local Physical Climate Uncertainty</div>
+                <div class="paper-coauthors">with G. Cavaliere and L. Fanelli</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title">Asset pricing models with downside risk</div>
+                <div class="paper-coauthors">with E. Ossola and L. Trapani</div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title">The Long-Run Temperature Risk Component</div>
+            </div>
+
+            <!-- Education Section -->
+            <section id="education" class="section">
+                <h2>Education</h2>
+                
+                <div class="education-entry">
+                    <div class="education-year">2024</div>
+                    <div class="education-title">PhD in Economics</div>
+                    <div class="education-institution">University of Bologna (IT)</div>
+                    <div class="education-details">
+                        <ul>
+                            <li>Advisors: <span class="advisor-name">M. Gonzalez-Eiras</span> (U of Bologna) and <span class="advisor-name">M.M. Croce</span> (Bocconi U)</li>
+                            <li>PhD students' representative in the Council of Department</li>
+                            <li>Organizer of the DSE Reading Group in Macro-Finance</li>
+                        </ul>
+                        <div class="visiting-position">
+                            <div class="education-year">2023</div>
+                            <div class="education-institution">London Business School (UK)</div>
+                            <div>Visiting Student, sponsor: H. Kung</div>
+                        </div>
+                        <div class="visiting-position">
+                            <div class="education-year">2021</div>
+                            <div class="education-institution">Bocconi University (IT)</div>
+                            <div>Visiting Student (virtual), sponsor: M.M. Croce</div>
+                        </div>
+                        <div class="visiting-position">
+                            <div class="education-year">2020</div>
+                            <div class="education-institution">Vienna Graduate School of Finance (AT)</div>
+                            <div>Visiting Student (virtual), sponsor: C. Wagner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-entry">
+                    <div class="education-year">2018</div>
+                    <div class="education-title">MSc in Advanced Economics and Finance</div>
+                    <div class="education-institution">Copenhagen Business School (DK)</div>
+                    <div class="visiting-position">
+                        <div class="education-year">2017</div>
+                        <div class="education-institution">Copenhagen University (DK)</div>
+                        <div>Credit Student</div>
+                    </div>
+                </div>
+
+                <div class="education-entry">
+                    <div class="education-year">2016</div>
+                    <div class="education-title">BSc in Business Administration</div>
+                    <div class="education-institution">University of Bologna (IT)</div>
+                </div>
+
+                <div class="education-entry">
+                    <div class="education-year">2013</div>
+                    <div class="education-title">HSD in Mechanical Engineering</div>
+                    <div class="education-institution">I.I.S. Aldini Valeriani (Bologna, IT)</div>
+                </div>
+            </section>
+
+            <!-- Teaching Section -->
+            <section id="teaching" class="section">
+                <h2>Teaching</h2>
+                
+                <h3>At University of Bologna (IT)</h3>
+                <div class="institution-courses">
+                    <div class="course-entry">
+                        <div class="course-year">2022-25:</div>
+                        <div>
+                            <span class="course-title">Asset Pricing</span>
+                            <span class="course-info">(Grad), TA to Prof. M. Gonzalez-Eiras</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-entry">
+                        <div class="course-year">2024-25:</div>
+                        <div>
+                            <span class="course-title">Financial Econometrics</span>
+                            <span class="course-info">(Grad), TA to Prof. G. Moramarco</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-entry">
+                        <div class="course-year">2021:</div>
+                        <div>
+                            <span class="course-title">Asset Pricing</span>
+                            <span class="course-info">(Grad), TA to Prof. G. Camera</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-entry">
+                        <div class="course-year">2020:</div>
+                        <div>
+                            <span class="course-title">Financial Instruments and Markets</span>
+                            <span class="course-info">(UndGrad), TA to Prof. G. Camera</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>At Copenhagen Business School (DK)</h3>
+                <div class="institution-courses">
+                    <div class="course-entry">
+                        <div class="course-year">2018:</div>
+                        <div>
+                            <span class="course-title">Macroeconomics 2</span>
+                            <span class="course-info">(UndGrad), TA to Prof. A. Sørensen</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <div class="contact-item">
+                    <p>Office: Piazza Scaravilli 2, 40126 Bologna, Italy</p>
+                    <p>Institutional email: <span class="monospace-inline">f.franceschini -> unibo.it</span></p>
+                    
+                    <div class="contact-links">
+                        <a href="https://www.unibo.it/sitoweb/f.franceschini/en">Institutional webpage</a>
+                        <a href="https://orcid.org/0000-0003-2827-8023">ORCID</a>
+                        <a href="https://ssrn.com/author=2836171">SSRN</a>
+                        <a href="https://www.linkedin.com/in/frn-fab/?locale=en_US">LinkedIn</a>
+                        <a href="https://mastodon.social/@franceschini_f">Mastodon</a>
+                        <a href="https://twitter.com/Frn_Fab">Twitter</a>
+                    </div>
+                </div>
+
+                <h3>References</h3>
+                <div class="reference-grid">
+                    <div class="reference-item">
+                        <div class="reference-name">Martin Gonzalez-Eiras</div>
+                        <div class="reference-title">Associate Professor</div>
+                        <div class="reference-institution">University of Bologna</div>
+                    </div>
+
+                    <div class="reference-item">
+                        <div class="reference-name">Mariano Massimiliano Croce</div>
+                        <div class="reference-title">Professor of Finance</div>
+                        <div class="reference-institution">Bocconi University</div>
+                    </div>
+
+                    <div class="reference-item">
+                        <div class="reference-name">Giuseppe Cavaliere</div>
+                        <div class="reference-title">Full Professor</div>
+                        <div class="reference-institution">University of Bologna</div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <hr class="footer-divider">
+        <img src="assets/img/oibafox.png" alt="Footer decoration" class="footer-image">
+    </div>
+
+    <script>
+        // Function to generate navigation from h2 elements
+        function generateNavigation() {
+            const nav = document.querySelector('.section-nav');
+            const sections = document.querySelectorAll('.section h2');
+            
+            // Clear existing navigation
+            nav.innerHTML = '';
+            
+            // Create navigation links for each section
+            sections.forEach(section => {
+                const sectionId = section.parentElement.id;
+                const sectionTitle = section.textContent;
+                const link = document.createElement('a');
+                link.href = `#${sectionId}`;
+                link.textContent = sectionTitle;
+                nav.appendChild(link);
+            });
+        }
+
+        // Function to update active navigation link
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.section-nav a');
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                // Check if section top is near the top of viewport (with offset for nav)
+                if (rect.top <= 150 && rect.bottom > 0) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const correspondingLink = document.querySelector(`a[href="#${section.id}"]`);
+                    if (correspondingLink) {
+                        correspondingLink.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Add smooth scrolling to nav links
+        function initSmoothScroll() {
+            document.querySelectorAll('.section-nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const sectionTitle = targetSection.querySelector('h2');
+                        const offset = sectionTitle ? sectionTitle.offsetHeight + 20 : 0; // Add 20px extra space after title
+                        
+                        window.scrollTo({
+                            top: targetSection.offsetTop + offset - 60,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Function to handle abstract toggle
+        function initAbstractToggles() {
+            document.querySelectorAll('.abstract-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const abstract = this.closest('.paper').querySelector('.paper-abstract');
+                    abstract.classList.toggle('show');
+                });
+            });
+        }
+
+        // Initialize everything when the page loads
+        window.addEventListener('load', () => {
+            generateNavigation();
+            initSmoothScroll();
+            updateActiveNav();
+            initAbstractToggles();
+        });
+
+        // Update active nav on scroll with throttling
+        let isScrolling;
+        window.addEventListener('scroll', function() {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(updateActiveNav, 10);
+        });
+    </script>
+</body>
+</html> 
