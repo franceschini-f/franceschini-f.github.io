@@ -603,10 +603,7 @@
 
         .course-entry {
             margin-bottom: 1rem;
-            display: grid;
-            grid-template-columns: 4.2rem auto;  /* Increased from 3.8rem */
-            gap: 0.7rem;
-            align-items: baseline;
+            display: block;
         }
 
         .course-entry:last-child {
@@ -616,20 +613,15 @@
         .course-title {
             font-weight: 500;
             color: #1a1a1a;
-            margin-right: 0.5rem;
+            display: block;
+            margin-bottom: 0.2rem;
         }
 
         .course-info {
             color: #444;  /* Darker gray from #666 */
             font-size: 0.9rem;
-            margin-left: 0.2rem;
-        }
-
-        .course-year {
-            color: #444;  /* Darker gray from #666 */
-            font-size: 0.9rem;
-            text-align: right;
-            white-space: nowrap;
+            display: block;
+            margin-left: 0;
         }
 
         .monospace-inline {
@@ -809,34 +801,25 @@
             <h3>At University of Bologna (IT)</h3>
             <div class="institution-courses">
                 <div class="course-entry">
-                    <div class="course-year">2022-25:</div>
                     <div>
-                        <span class="course-title">Asset Pricing</span>
-                        <span class="course-info">(Grad), TA to Prof. M. Gonzalez-Eiras</span>
+                        <div class="course-title">Asset Pricing (Graduate)</div>
+                        <div class="course-info">2022-25: TA to Prof. M. Gonzalez-Eiras</div>
+                        <div class="course-info">2021: TA to Prof. G. Camera</div>
                     </div>
                 </div>
                 
                 <div class="course-entry">
-                    <div class="course-year">2024-25:</div>
                     <div>
-                        <span class="course-title">Financial Econometrics</span>
-                        <span class="course-info">(Grad), TA to Prof. G. Moramarco</span>
+                        <div class="course-title">Financial Econometrics (Graduate)</div>
+                        <div class="course-info">2024-25: TA to Prof. G. Moramarco</div>
                     </div>
                 </div>
                 
-                <div class="course-entry">
-                    <div class="course-year">2021:</div>
-                    <div>
-                        <span class="course-title">Asset Pricing</span>
-                        <span class="course-info">(Grad), TA to Prof. G. Camera</span>
-                    </div>
-                </div>
                 
                 <div class="course-entry">
-                    <div class="course-year">2020:</div>
                     <div>
-                        <span class="course-title">Financial Instruments and Markets</span>
-                        <span class="course-info">(UndGrad), TA to Prof. G. Camera</span>
+                        <div class="course-title">Financial Instruments and Markets (UndGrad)</div>
+                        <div class="course-info">2020: TA to Prof. G. Camera</div>
                     </div>
                 </div>
             </div>
@@ -844,10 +827,9 @@
             <h3>At Copenhagen Business School (DK)</h3>
             <div class="institution-courses">
                 <div class="course-entry">
-                    <div class="course-year">2018:</div>
                     <div>
-                        <span class="course-title">Macroeconomics 2</span>
-                        <span class="course-info">(UndGrad), TA to Prof. A. Sørensen</span>
+                        <div class="course-title">Macroeconomics 2 (UndGrad)</div>
+                        <div class="course-info">2018: TA to Prof. A. Sørensen</div>
                     </div>
                 </div>
             </div>
