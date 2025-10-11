@@ -495,8 +495,8 @@
 
         .reference-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
             margin-top: 1rem;
         }
 
@@ -571,6 +571,13 @@
             .reference-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+        }
+
+        /* Medium screens - keep 2 columns but reduce gap */
+        @media (max-width: 768px) and (min-width: 481px) {
+            .reference-grid {
+                gap: 2rem;
             }
         }
 
@@ -836,7 +843,7 @@
                 <div class="course-entry">
                     <div>
                         <div class="course-title">Asset Pricing (Graduate)</div>
-                        <div class="course-info">2022-25: TA to Prof. M. Gonzalez-Eiras</div>
+                        <div class="course-info">2022-26: TA to Prof. M. Gonzalez-Eiras</div>
                         <div class="course-info">2021: TA to Prof. G. Camera</div>
                     </div>
                 </div>
@@ -844,7 +851,8 @@
                 <div class="course-entry">
                     <div>
                         <div class="course-title">Financial Econometrics (Graduate)</div>
-                        <div class="course-info">2024-25: TA to Prof. G. Moramarco</div>
+                        <div class="course-info">2025-26: TA to M. Balduini</div>
+                        <div class="course-info">2024: TA to G. Moramarco</div>
                     </div>
                 </div>
                 
@@ -903,6 +911,12 @@
                     <div class="reference-name">Giuseppe Cavaliere</div>
                     <div class="reference-title">Full Professor</div>
                     <div class="reference-institution">University of Bologna</div>
+                </div>
+                
+                <div class="reference-item">
+                    <div class="reference-name">Pietro Peretto</div>
+                    <div class="reference-title">Full Professor</div>
+                    <div class="reference-institution">Duke University</div>
                 </div>
             </div>
         </section>
