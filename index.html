@@ -376,6 +376,12 @@
             /* font-weight: light; */
         }
 
+        .status {
+            font-weight: normal;
+            font-style: normal;
+            color: #666;
+        }
+
         .paper-coauthors {
             color: #333;
             font-size: 1rem;
@@ -405,9 +411,9 @@
         }
 
         .paper-links a {
-            color: rgb(3, 18, 31);
+            color: #333;
             background-color: transparent;
-            border: 1.6px solid rgb(3, 18, 31);
+            border: 1.6px solid #333;
             text-decoration: none;
             margin-right: 0.5rem;
             font-size: 0.9rem;
@@ -420,6 +426,7 @@
 
         .paper-links a:hover {
             color: white;
+            border: 1.6px solid rgb(3, 18, 31);
             background-color: rgb(3, 18, 31);
             text-decoration: none;
         }
@@ -775,7 +782,7 @@
             
             <div class="paper">
                 <div class="paper-title">The Innovation Long-Run Risk Component (JMP)</div>
-                <div class="paper-journal">R&R at Journal of Monetary Economics</div>
+                <div class="paper-journal"><span class="status">Revision requested at</span> Journal of Monetary Economics</div>
                 <!-- <div class="paper-metadata">
                     <p>with Author 1, Author 2</p>
                     <p>Journal: Journal Name, Year</p>
