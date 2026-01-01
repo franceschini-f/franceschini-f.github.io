@@ -353,13 +353,61 @@
             line-height: 1; 
         }
 
+        .paper-metadata {
+            color: #333;
+            font-size: 1rem;
+            margin: 0.3rem 0;
+        }
+        
+        .paper-metadata p {
+            color: #333;  /* Darker gray from #666 */
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .paper-journal {
+            color: #333;
+            font-size: 1rem;
+            margin-top: 0rem;
+            margin-bottom: 0.786rem;
+            margin-left: 2em;
+            font-style: italic;
+            font-weight: 500;
+            /* font-weight: light; */
+        }
+
+        .paper-coauthors {
+            color: #333;
+            font-size: 1rem;
+            margin-top: 0rem;
+            margin-left: 2em;
+        }
+
+        .paper-coauthors a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+            font-family: inherit;
+            /* margin-right: 0.5rem; */
+        }
+
+        .paper-coauthors a:hover,
+        .paper-coauthors a:visited,
+        .paper-coauthors a:active {
+            color: inherit;
+            text-decoration: underline;
+        }
+
         .paper-links {
             margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
         }
 
         .paper-links a {
-            color: white;
-            background-color: rgb(3, 18, 31);
+            color: rgb(3, 18, 31);
+            background-color: transparent;
+            border: 1.6px solid rgb(3, 18, 31);
             text-decoration: none;
             margin-right: 0.5rem;
             font-size: 0.9rem;
@@ -367,28 +415,13 @@
             padding: 0.1rem 0.37rem;
             border-radius: 3px;
             display: inline-block;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .paper-links a:hover {
-            background-color: rgba(3, 18, 31, 0.85);
+            color: white;
+            background-color: rgb(3, 18, 31);
             text-decoration: none;
-        }
-
-        .paper-coauthors {
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0rem;
-            margin-left: 2em;
-        }
-
-        .paper-coauthors a {
-            text-decoration: underline;
-            color: inherit;
-            font-weight: inherit;
-            font-size: inherit;
-            font-family: inherit;
-            /* margin-right: 0.5rem; */
         }
 
         .paper-abstract {
@@ -401,12 +434,6 @@
 
         .paper-abstract.show {
             display: block;
-        }
-
-        .paper-metadata {
-            color: #666;
-            font-size: 0.9rem;
-            margin: 0.3rem 0;
         }
 
         /* Education items */
@@ -685,11 +712,6 @@
             display: inline;
         }
 
-        .paper-metadata p {
-            color: #444;  /* Darker gray from #666 */
-            font-size: 0.9rem;
-            margin-bottom: 0.2rem;
-        }
     </style>
 </head>
 <body>
@@ -701,17 +723,19 @@
         <div class="sidebar-content-wrapper">
             <div class="sidebar-content">
                 <div class="essential-info">
-                    <p>Research Fellow @ U of Bologna</p>
+                    <!-- <p>Research Fellow @ U of Bologna</p> -->
                     <p>Research in macro-finance</p>
+                    <!-- <p>franceschini.f -> pm.me</p> -->
                     <p>franceschini.f -> protonmail.com</p>
                 </div>
+                <br>
                 <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-cv.pdf" class="download-button" target="_blank">
                     <span class="download-text">Download</span>
                     <span class="button-text">FULL CV</span>
                 </a>
             </div>
         </div>
-        <p class="last-updated">Last updated in November 2025</p>
+        <p class="last-updated">Last updated in January 2026</p>
     </div>
 
     <!-- Main Content -->
@@ -726,12 +750,13 @@
                 Welcome!
                 <br>
                 <br>
-                I am an applied financial economist, Research Fellow at the University of Bologna.
+                I am an applied macro-finance economist.
+                <!-- , Research Fellow at the University of Bologna -->
                 <!-- currently a  (Italy) -->
                 <!-- Economics Department of the  -->
                 <br>
                 <br>
-                I am on the 2025/26 Job Market.
+                Currently on the Job Market.
             </p>
         </div>
 
@@ -739,7 +764,9 @@
         <section id="research" class="section">
             <h2>Research</h2>
 
-            <div style="padding-bottom: 1rem; padding-right: 1rem;">My work examines the link between asset prices and the broader economy, leveraging the richness of financial market data to study economic dynamics, with a focus on growth, financial frictions, and natural resources.</div>
+            <div style="padding-bottom: 1rem; padding-right: 1rem;">My work examines the link between asset prices and the broader economy,
+            <!-- leveraging the richness of financial market data to study economic dynamics, -->
+            with a focus on growth, financial frictions, and natural resources.</div>
             <!-- <div class="intro-text">
                  how asset prices mirror the/shape  mechanisms and
             </div> -->
@@ -747,7 +774,8 @@
             <h3>Working papers</h3>
             
             <div class="paper">
-                <div class="paper-title">The Innovation Long-Run Risk Component [JMP]</div>
+                <div class="paper-title">The Innovation Long-Run Risk Component (JMP)</div>
+                <div class="paper-journal">R&R at Journal of Monetary Economics</div>
                 <!-- <div class="paper-metadata">
                     <p>with Author 1, Author 2</p>
                     <p>Journal: Journal Name, Year</p>
@@ -755,7 +783,7 @@
                 </div> -->
                 <div class="paper-links">
                     <a href="#" class="abstract-toggle">Abstract</a>
-                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-rd_lrr.pdf" target="_blank">Paper (PDF)</a>
+                    <!-- <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-rd_lrr.pdf" target="_blank">Paper (PDF)</a> -->
                     <a href="https://ssrn.com/abstract=5161761" target="_blank">Paper (SSRN)</a>
                     <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/Franceschini-rd_lrr-pres.pdf" target="_blank">Slides (20 min)</a>
                     <a href="https://zenodo.org/records/17417371" target="_blank">Data (effective R&D)</a>
@@ -771,10 +799,11 @@
 
             <div class="paper">
                 <div class="paper-title">Does CAPM Overestimate the Risk or Its Price More?</div>
+                <div class="paper-journal"></div>
                 <div class="paper-links">
                     <a href="#" class="abstract-toggle">Abstract</a>
                     <!-- <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-lra.pdf" target="_blank">Paper (PDF)</a> -->
-                    <a href="https://ssrn.com/abstract=5020899">Paper (SSRN, Preliminary draft)</a>
+                    <a href="https://ssrn.com/abstract=5020899">Paper (SSRN, Preliminary)</a>
                 </div>
                 <div class="paper-abstract">
                     Empirical returns systematically depart from CAPM predictions, with deviations declining in asset betas. This paper decomposes this pattern into mismeasurement of risk and the risk premium, using a framework that accounts for leverage constraints and multiple risk factors. This spans and generalizes two previously separate explanations of the anomaly, showing how bid-ups for high-risk assets arise from funding tightness in the presence of risks beyond market exposure. Crucially, even with binding constraints, any factor model can be expressed as a single aggregate risk measure multiplying the expected market return. Funding tightness and exposure to omitted risks are then demonstrated to offset each other in explaining the beta-related departures, with their relative contributions quantifiable. GMM estimates show both channels are significant, with omitted risks accounting for a slightly larger share, and the spread generated by funding tightness at around 2% per year.
@@ -784,9 +813,10 @@
 
             <div class="paper">
                 <div class="paper-title">Are You Betting On Sustainability?</div>
+                <div class="paper-journal"></div>
                 <div class="paper-links">
                     <a href="#" class="abstract-toggle">Abstract</a>
-                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-sust_prem.pdf" target="_blank">Paper (PDF, Preliminary draft)</a>
+                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-sust_prem.pdf" target="_blank">Paper (PDF, Preliminary)</a>
                 </div>
                 <div class="paper-abstract">
                     When the sustainability of assets is priced, its impact on discount rates depends not only on the asset's sustainability but intrinsically also on its risk profile. This has implications often overlooked in portfolios used to assess the sustainability premium or to hedge sustainability-related shocks. Specifically, the average returns of sustainability-sorted long-short portfolios are shaped by the risk profiles of their components, even when the portfolio is risk-neutral, which also affects the portfolio's sensitivity to shifts in sustainability concerns. Using Refinitiv ESG scores for US stocks, a weak sustainability premium is observed, whose significance differs importantly from that of the plain long-short portfolio returns.
@@ -798,16 +828,27 @@
             <div class="paper">
                 <div class="paper-title">Uncertain Innovation</div>
                 <div class="paper-coauthors">with <a href="https://sites.google.com/view/andrearenzetti/home" target="_blank">A. Renzetti</a></div>
+                <!-- <div class="paper-journal">Journal of Prova Economics</div> -->
             </div>
 
             <div class="paper">
                 <div class="paper-title">Asset Pricing Models with Downside Risk</div>
                 <div class="paper-coauthors">with <a href="https://sites.google.com/unimib.it/elisaossola/home" target="_blank">E. Ossola</a> and <a href="https://sites.google.com/site/proflorenzotrapani/home" target="_blank">L. Trapani</a></div>
+                <div class="paper-journal"></div>
+                <div class="paper-links">
+                    <a href="#" class="abstract-toggle">Abstract</a>
+                </div>
+                <div class="paper-abstract">We develop an econometric methodology to estimate risk premia conditional on states of the world defined by a threshold on an observable variable.
+                The proposed methodology relies on asset pricing restrictions induced by the no-arbitrage assumption and employs established techniques to optimally select the threshold defining the states.
+                The derivation of asymptotic results allows inference on the values of risk premia in different states, including testing whether they are zero in a given state.
+                We illustrate the method using models with two and three states; the approach can be readily extended to a larger number of states.
+                Applications will consider states defined by market returns, intermediaries' funding conditions, and expected volatility, speaking to different strands of the literature.</div>
             </div>
 
             <div class="paper">
                 <div class="paper-title">Local Physical Climate Uncertainty</div>
                 <div class="paper-coauthors">with <a href="https://giuseppecavaliere.wixsite.com/giuseppe" target="_blank">G. Cavaliere</a> and <a href="https://sites.google.com/site/lucafanelliunibo/home" target="_blank">L. Fanelli</a></div>
+                <div class="paper-journal"></div>
                 <div class="paper-links">
                     <a href="#" class="abstract-toggle">Abstract</a>
                 </div>
@@ -823,10 +864,12 @@
             <div class="paper">
                 <div class="paper-title">The Speed of Macroeconomic Risks</div>
                 <div class="paper-coauthors">with <a href="https://sites.google.com/view/marco-mazzali" target="_blank">M. Mazzali</a></div>
+                <div class="paper-journal"></div>
             </div>
 
             <div class="paper">
                 <div class="paper-title">The Temperature Long-Run Risk Component</div>
+                <div class="paper-journal"></div>
             </div>
         </section>
 
@@ -934,15 +977,23 @@
             <div class="contact-item">
                 <p>Office: Piazza Scaravilli 2, 40126 Bologna, Italy</p>
                 <p>Institutional email: <span class="monospace-inline">f.franceschini -> unibo.it</span></p>
-                <div class="paper-links" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-top: 0.5rem;">
-                    <!-- contact-links -->
-                    <a href="https://www.unibo.it/sitoweb/f.franceschini/en" target="_blank">Institutional webpage</a>
+                <p class="paper-links" style="gap: 0.5rem;">Institutional pages:&nbsp; 
+                    <a href="https://www.unibo.it/sitoweb/f.franceschini/en" target="_blank">UniBo profile</a>
                     <a href="https://orcid.org/0000-0003-2827-8023" target="_blank">ORCID</a>
+                </p>
+                <p class="paper-links" style="gap: 0.5rem;">Research repositories:&nbsp; 
                     <a href="https://ssrn.com/author=2836171" target="_blank">SSRN</a>
+                    <a href="https://ideas.repec.org/f/pfr479.html" target="_blank">RePEc</a>
+                </p>
+                <p class="paper-links" style="gap: 0.5rem;">Social profiles:&nbsp; 
                     <a href="https://www.linkedin.com/in/frn-fab/?locale=en_US" target="_blank">LinkedIn</a>
                     <a href="https://mastodon.social/@franceschini_f" target="_blank">Mastodon</a>
                     <a href="https://twitter.com/Frn_Fab" target="_blank">Twitter</a>
-                </div>
+                </p>
+                <!-- contact-links list -->
+                <!-- <div class="paper-links" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="https://www.linkedin.com/in/frn-fab/?locale=en_US" target="_blank">LinkedIn</a>
+                </div> -->
             </div>
 
             <h3>References</h3>
