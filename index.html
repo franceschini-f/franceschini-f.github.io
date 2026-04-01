@@ -159,6 +159,9 @@
             .sidebar-content-wrapper {
                 padding-top: calc(8% - 0.8rem);  /* Compact spacing for smaller screens */
             }
+            .contact-label {
+                display: block;
+            }
         }
 
         .essential-info {
@@ -285,25 +288,26 @@
 
         /* Sections */
         .section {
-            margin-bottom: 4rem;  /* Increased from 1rem for better section separation */
-            padding-top: 1.6rem;  /* Increased from 1rem for better spacing before title */
+            margin-bottom: 5rem;  /* Increased from 1rem for better section separation */
             scroll-margin-top: 80px;
             /* min-height: 50vh; */  /* Original rule - caused extra space */
         }
 
-        /* Teaching section specific override */
-        #teaching.section {
-            min-height: unset;  /* Remove minimum height requirement for teaching section */
-        }
 
         .section h2 {
-            margin-top: 0;        /* No top margin since section has padding */
-            margin-bottom: 1rem;  /* Reduced from 2rem for better spacing after title */
+            margin-top: 0; /* section has padding */
+            margin-bottom: 2rem;  /* from 2rem */
             font-family: 'Roboto', sans-serif;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 1.8rem;
-            color: #333;
-            background-color: white;
+            /*  */
+            color: white;
+            background-color: rgb(3, 18, 31);
+            display: inline-block;
+            padding: 2px 10px;
+            /*  */
+            /* color: #333; */
+            /* background-color: white; */
             position: relative;
             z-index: 1;
         }
@@ -314,34 +318,35 @@
             font-weight: 500;
             font-size: 1.6rem;
             color: #1c4587;
-            margin-top: 1.6rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
+            margin-bottom: 2rem;
+            /* text-align: center; */
+        }
+
+        .subsection {
+            margin-bottom: 2rem;  /* space between subsections */
         }
 
         #teaching h3 {
             font-size: 1.2rem;
-            font-style: italic;
-            text-align: left;
-            margin-top: 1.6rem;
-        }
-
-        #teaching h3:first-of-type {
-            margin-top: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
         }
 
         .intro-text {
-            padding: 1.4rem 0;
-            line-height: 1.6;
+            padding: 4.3rem 0;
+            /* line-height: 1.6; */
+            line-height: 1.2;
             color: #333;
-            margin-bottom: 1.2rem;  /* Added margin to separate from next section */
+            margin-block: 2.7rem;  
+            font-size: 1.2rem;
+            font-weight: 300;
         }
 
         /* Paper items */
         .paper {
-            padding: 1rem;
+            padding: 0rem 1rem;
             background-color: #fff;
-            margin-top: 0;        /* Removed margin since h3 has proper spacing */
+            margin-bottom: 2rem;        /* Removed margin since h3 has proper spacing */
         }
 
         .paper-title {
@@ -369,8 +374,8 @@
             color: #333;
             font-size: 1rem;
             margin-top: 0rem;
-            margin-bottom: 0.786rem;
-            margin-left: 2em;
+            margin-bottom: 0.7rem;
+            /* margin-left: 2em; */
             font-style: italic;
             font-weight: 500;
             /* font-weight: light; */
@@ -386,7 +391,7 @@
             color: #333;
             font-size: 1rem;
             margin-top: 0rem;
-            margin-left: 2em;
+            /* margin-left: 2em; */
         }
 
         .paper-coauthors a {
@@ -406,7 +411,7 @@
         }
 
         .paper-links {
-            margin-top: 0.5rem;
+            margin-bottom: 0.7rem;
             /* margin-bottom: 0.5rem; */
         }
 
@@ -427,14 +432,15 @@
 
         .paper-links a:hover {
             color: white;
-            border: 1.6px solid rgb(3, 18, 31);
-            background-color: rgb(3, 18, 31);
+            border: 1.6px solid rgb(180,50,40);
+            /* rgb(3, 18, 31); */
+            background-color: rgb(180,50,40);
             text-decoration: none;
         }
 
         .paper-abstract {
             display: none;
-            margin-top: 1rem;
+            /* margin-top: 1rem; */
             padding: 1rem;
             background-color: #f8f8f8;
             border-left: 3px solid #1c4587;
@@ -446,7 +452,7 @@
 
         /* Education items */
         .education-entry {
-            padding: 1.5rem 1.5rem 0 1.5rem;
+            margin: 0 0 1.5rem 0 ;
             background-color: #fff;
             margin-top: 0;        /* Removed margin since h3 has proper spacing */
         }
@@ -462,7 +468,7 @@
             font-size: 1.2rem;
             font-weight: bold;
             color: #000000;
-            /* margin-bottom: 0.5rem; */
+            margin-bottom: 0.5rem;
         }
 
         .education-institution {
@@ -470,11 +476,12 @@
             font-size: 1.2rem;
             font-style: italic;
             color: #1c4587;
-            /* margin-bottom: 0.3rem; */
+            margin-bottom: 0.5rem;
         }
 
         .education-details {
-            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding-inline: 1rem;
         }
 
         .education-details ul {
@@ -544,6 +551,10 @@
             text-decoration: none;
             font-weight: 500;
             width: fit-content;  /* Make link only as wide as its text */
+        }
+
+        .contact-label {
+            margin-right: 0.3em;
         }
 
         .reference-grid {
@@ -687,7 +698,7 @@
         }
 
         .institution-courses {
-            padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+            padding-inline: 1rem;
             margin-bottom: 2rem;
         }
 
@@ -722,6 +733,12 @@
 
     </style>
 </head>
+<!-- 
+mean R: 51.8%
+mean G: 30.1%
+mean B: 18.8%
+RGB: (132,77,48)
+-->
 <body>
     <!-- Left Sidebar -->
     <div class="left-sidebar">
@@ -772,13 +789,15 @@
         <section id="research" class="section">
             <h2>Research</h2>
 
-            <div style="padding-bottom: 1rem; padding-right: 1rem;">My work examines the link between asset prices and the broader economy,
+            <div style="padding-bottom: 2rem;">My work examines the link between asset prices and the broader economy,
             <!-- leveraging the richness of financial market data to study economic dynamics, -->
             with a focus on growth, financial frictions, and natural resources.</div>
             <!-- <div class="intro-text">
                  how asset prices mirror the/shape  mechanisms and
             </div> -->
 
+
+        <section class="subsection">
             <h3>Working papers</h3>
             
             <div class="paper">
@@ -821,12 +840,17 @@
                 <div class="paper-journal"></div>
                 <div class="paper-links">
                     <a href="#" class="abstract-toggle">Abstract</a>
-                    <a href="https://github.com/franceschini-f/franceschini-f.github.io/raw/main/assets/docs/franceschini-sust_prem.pdf" target="_blank">Paper (PDF, Preliminary)</a>
+                    <a href="https://papers.ssrn.com/abstract=6378119" target="_blank">Paper (SSRN, Preliminary)</a>
                 </div>
                 <div class="paper-abstract">
                     When the sustainability of assets is priced, its impact on discount rates depends not only on the asset's sustainability but intrinsically also on its risk profile. This has implications often overlooked in portfolios used to assess the sustainability premium or to hedge sustainability-related shocks. Specifically, the average returns of sustainability-sorted long-short portfolios are shaped by the risk profiles of their components, even when the portfolio is risk-neutral, which also affects the portfolio's sensitivity to shifts in sustainability concerns. Using Refinitiv ESG scores for US stocks, a weak sustainability premium is observed, whose significance differs importantly from that of the plain long-short portfolio returns.
                 </div>
             </div>
+        </section>
+
+
+
+        <section class="subsection">
 
             <h3>Research in progress</h3>
 
@@ -878,6 +902,9 @@
             </div>
         </section>
 
+        </section>
+
+
         <!-- Education Section -->
         <section id="education" class="section">
             <h2>Education</h2>
@@ -914,10 +941,12 @@
                 <div class="education-year">2018</div>
                 <div class="education-title">MSc in Advanced Economics and Finance</div>
                 <div class="education-institution">Copenhagen Business School (DK)</div>
+                <div class="education-details">
                 <div class="visiting-position">
                     <div class="education-year">2017</div>
                     <div class="education-institution">Copenhagen University (DK)</div>
                     <div>Credit Student</div>
+                </div>
                 </div>
             </div>
 
@@ -937,7 +966,8 @@
         <!-- Teaching Section -->
         <section id="teaching" class="section">
             <h2>Teaching</h2>
-            
+
+        <section class="subsection">
             <h3>University of Bologna (IT)</h3>
             <div class="institution-courses">
                 <div class="course-entry">
@@ -964,38 +994,44 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <h3>Copenhagen Business School (DK)</h3>
-            <div class="institution-courses">
-                <div class="course-entry">
-                    <div>
-                        <div class="course-title">Macroeconomics (Graduate)</div>
-                        <div class="course-info">2018: TA to Prof. A. Sørensen</div>
+
+        <section class="subsection">
+                <h3>Copenhagen Business School (DK)</h3>
+                <div class="institution-courses">
+                    <div class="course-entry">
+                        <div>
+                            <div class="course-title">Macroeconomics (Graduate)</div>
+                            <div class="course-info">2018: TA to Prof. A. Sørensen</div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
+
+    </section>
 
         <!-- Contact Section -->
         <section id="contact" class="section">
             <h2>Contact</h2>
             <div class="contact-item">
-                <p>Office: Piazza Scaravilli 2, 40126 Bologna, Italy</p>
-                <p>Institutional email: <span class="monospace-inline">f.franceschini -> unibo.it</span></p>
-                <p class="paper-links" style="gap: 0.5rem;">Institutional pages:&nbsp; 
+                <p><span class="contact-label">Office:</span><span class="contact-value">Piazza Scaravilli 2, 40126 Bologna, Italy</span></p>
+                <p><span class="contact-label">Institutional email:</span><span class="contact-value monospace-inline">f.franceschini -> unibo.it</span></p>
+                <p class="paper-links" style="gap: 0.5rem;"><span class="contact-label">Institutional pages:&nbsp;</span><span class="contact-value">
                     <a href="https://www.unibo.it/sitoweb/f.franceschini/en" target="_blank">UniBo profile</a>
                     <a href="https://orcid.org/0000-0003-2827-8023" target="_blank">ORCID</a>
-                </p>
-                <p class="paper-links" style="gap: 0.5rem;">Research repositories:&nbsp; 
+                </span></p>
+                <p class="paper-links" style="gap: 0.5rem;"><span class="contact-label">Research repositories:&nbsp;</span><span class="contact-value">
                     <a href="https://ssrn.com/author=2836171" target="_blank">SSRN</a>
                     <a href="https://ideas.repec.org/f/pfr479.html" target="_blank">RePEc</a>
                     <a href="https://scholar.google.com/citations?user=-C6uSOcAAAAJ" target="_blank">G Scholar</a>
-                </p>
-                <p class="paper-links" style="gap: 0.5rem;">Social profiles:&nbsp; 
+                </span></p>
+                <p class="paper-links" style="gap: 0.5rem;"><span class="contact-label">Social profiles:&nbsp;</span><span class="contact-value">
                     <a href="https://www.linkedin.com/in/frn-fab/?locale=en_US" target="_blank">LinkedIn</a>
                     <a href="https://mastodon.social/@franceschini_f" target="_blank">Mastodon</a>
                     <a href="https://twitter.com/Frn_Fab" target="_blank">Twitter</a>
-                </p>
+                </span></p>
+
                 <!-- contact-links list -->
                 <!-- <div class="paper-links" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-top: 0.5rem;">
                     <a href="https://www.linkedin.com/in/frn-fab/?locale=en_US" target="_blank">LinkedIn</a>
@@ -1071,7 +1107,7 @@
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
             // Check if section top is near the top of viewport (with offset for nav)
-            if (rect.top <= 150 && rect.bottom > 0) {
+            if (rect.top <= 100 && rect.bottom > 0) {
                 navLinks.forEach(link => link.classList.remove('active'));
                 const correspondingLink = document.querySelector(`a[href="#${section.id}"]`);
                 if (correspondingLink) {
