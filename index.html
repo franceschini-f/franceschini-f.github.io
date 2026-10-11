@@ -489,7 +489,7 @@
 
         /* Education items */
         .education-entry {
-            margin: 0 0 1.5rem 0 ;
+            margin: 0 0 1.85rem 0 ;
             background-color: #fff;
             margin-top: 0;        /* Removed margin since h3 has proper spacing */
         }
@@ -547,9 +547,19 @@
         }
 
         .visiting-position {
-            margin-top: 0.5rem;
+            margin-top: 0.9rem;
             padding-left: 1rem;
-            border-left: 2px solid var(--line);
+            position: relative;
+        }
+
+        .visiting-position::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.4rem;
+            bottom: 0.4rem;
+            width: 2px;
+            background: var(--line);
         }
 
         .visiting-position .education-year {
@@ -559,6 +569,40 @@
         .visiting-position .education-institution {
             font-size: 1.2rem;
             margin-bottom: 0.2rem;
+        }
+
+        /* Year · Institution on one line */
+        .education-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0 0.5rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .education-meta > .education-year,
+        .education-meta > .education-institution {
+            margin-bottom: 0;
+        }
+
+        .education-meta > .education-institution::before {
+            content: "\00B7";
+            font-style: normal;
+            color: var(--text);
+            margin-right: 0.5rem;
+        }
+
+        .visiting-position .education-meta {
+            margin-bottom: 0;
+        }
+
+        /* Title first, year · place as caption */
+        .education-entry > .education-title {
+            margin-bottom: 0.1rem;
+        }
+
+        .education-entry > .education-meta {
+            margin-bottom: 1rem;
         }
 
         /* Contact section */
@@ -967,9 +1011,11 @@ RGB: (132,77,48)
             <h2>Education</h2>
             
             <div class="education-entry">
-                <div class="education-year">2024</div>
                 <div class="education-title">PhD in Economics</div>
-                <div class="education-institution">University of Bologna (IT)</div>
+                <div class="education-meta">
+                    <div class="education-year">2024</div>
+                    <div class="education-institution">University of Bologna (IT)</div>
+                </div>
                 <div class="education-details">
                     <ul>
                         <li>Advisors: <span class="advisor-name">M. Gonzalez-Eiras</span> (U of Bologna) and <span class="advisor-name">M.M. Croce</span> (Bocconi U)</li>
@@ -977,46 +1023,60 @@ RGB: (132,77,48)
                         <li>Organizer of the DSE Reading Group in Macro-Finance</li>
                     </ul>
                     <div class="visiting-position">
-                        <div class="education-year">2023</div>
-                        <div class="education-institution">London Business School (UK)</div>
+                        <div class="education-meta">
+                            <div class="education-year">2023</div>
+                            <div class="education-institution">London Business School (UK)</div>
+                        </div>
                         <div>Visiting Student, sponsor: H. Kung</div>
                     </div>
                     <div class="visiting-position">
-                        <div class="education-year">2021</div>
-                        <div class="education-institution">Bocconi University (IT)</div>
+                        <div class="education-meta">
+                            <div class="education-year">2021</div>
+                            <div class="education-institution">Bocconi University (IT)</div>
+                        </div>
                         <div>Visiting Student (virtual), sponsor: M.M. Croce</div>
                     </div>
                     <div class="visiting-position">
-                        <div class="education-year">2020</div>
-                        <div class="education-institution">Vienna Graduate School of Finance (AT)</div>
+                        <div class="education-meta">
+                            <div class="education-year">2020</div>
+                            <div class="education-institution">Vienna Graduate School of Finance (AT)</div>
+                        </div>
                         <div>Visiting Student (virtual), sponsor: C. Wagner</div>
                     </div>
                 </div>
             </div>
 
             <div class="education-entry">
-                <div class="education-year">2018</div>
                 <div class="education-title">MSc in Advanced Economics and Finance</div>
-                <div class="education-institution">Copenhagen Business School (DK)</div>
+                <div class="education-meta">
+                    <div class="education-year">2018</div>
+                    <div class="education-institution">Copenhagen Business School (DK)</div>
+                </div>
                 <div class="education-details">
                 <div class="visiting-position">
-                    <div class="education-year">2017</div>
-                    <div class="education-institution">Copenhagen University (DK)</div>
+                    <div class="education-meta">
+                        <div class="education-year">2017</div>
+                        <div class="education-institution">Copenhagen University (DK)</div>
+                    </div>
                     <div>Credit Student</div>
                 </div>
                 </div>
             </div>
 
             <div class="education-entry">
-                <div class="education-year">2016</div>
                 <div class="education-title">BSc in Business Administration</div>
-                <div class="education-institution">University of Bologna (IT)</div>
+                <div class="education-meta">
+                    <div class="education-year">2016</div>
+                    <div class="education-institution">University of Bologna (IT)</div>
+                </div>
             </div>
 
             <div class="education-entry">
-                <div class="education-year">2013</div>
                 <div class="education-title">HSD in Mechanical Engineering</div>
-                <div class="education-institution">I.I.S. Aldini Valeriani (Bologna, IT)</div>
+                <div class="education-meta">
+                    <div class="education-year">2013</div>
+                    <div class="education-institution">I.I.S. Aldini Valeriani (Bologna, IT)</div>
+                </div>
             </div>
         </section>
 
