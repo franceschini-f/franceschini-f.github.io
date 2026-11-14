@@ -76,8 +76,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- full set (previous): <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
-    <!-- only the styles in use: Inconsolata bold; Crimson Pro italic 400/500; Roboto 300/400/500/700 + italic 400 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Crimson+Pro:ital,wght@1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- previous (Roboto + Crimson Pro): <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Crimson+Pro:ital,wght@1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> -->
+    <!-- only the styles in use: Inconsolata bold; Roboto Flex 300–700 + grade 0–150 (variable); IBM Plex Sans italic 400 (journals); Source Serif 4 400 with native small caps (locations), self-hosted below -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Roboto+Flex:opsz,wght,GRAD@8..144,300..700,0..150&family=IBM+Plex+Sans:ital,wght@1,400&display=swap" rel="stylesheet">
+    <!-- Source Serif 4 is self-hosted: the Google Fonts copy lacks the native small caps (smcp) that Adobe's release has -->
+    <style>
+        @font-face {
+            font-family: 'Source Serif 4';
+            src: url('assets/fonts/SourceSerif4-Regular-latin.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
     <!-- family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900 -->
     <!-- Courier Prime -->
     <title>Fabio Franceschini | Research in Finance and Macroeconomics</title>
@@ -110,7 +121,7 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             line-height: 1.6;
             color: var(--text);
             display: flex;
@@ -130,7 +141,7 @@
         }
 
         .name-header {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             font-size: 30px;
             font-weight: 700;
             font-style: normal;
@@ -144,7 +155,7 @@
             line-height: 1;
             padding: 7px 10px;
             display: inline-block;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             font-weight: 700;
             font-size: 34px;
             letter-spacing: 0.03em;
@@ -206,7 +217,7 @@
             text-align: center;
             text-decoration: none;
             color: var(--text);
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             font-weight: 500;
             margin: 0.8rem auto;  /* Reduced from 1rem */
             transition: background-color 0.3s ease;
@@ -281,7 +292,7 @@
             color: #666;
             font-weight: 500;
             font-size: 1.45rem;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, background-color 0.3s ease;  /* was 'all': with a variable font, 'all' animated the weight */
             padding: 10px 16px 10px 16px;  /* More padding top, less bottom */
             border-radius: 0;
             display: inline-block;
@@ -297,7 +308,8 @@
         /* Invisible bold copy of the label: reserves the bold width so hover doesn't shift the nav */
         .section-nav a::after {
             content: attr(data-text);
-            font-weight: bold;
+            font-weight: 600;  /* matches the hover weight (was bold) */
+            font-variation-settings: 'GRAD' 75;
             height: 0;
             overflow: hidden;
             visibility: hidden;
@@ -306,7 +318,8 @@
         .section-nav a:hover {
             color: #1a1a1a;
             background-color: transparent;
-            font-weight: bold;
+            font-weight: 600;  /* was bold: smaller weight step = less widening */
+            font-variation-settings: 'GRAD' 75;  /* thicker strokes without widening the letters */
         }
 
         .section-nav a.active {
@@ -325,7 +338,7 @@
         .section h2 {
             margin-top: 0; /* section has padding */
             margin-bottom: 3.5rem;  /* from 2rem */
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             font-weight: 500;
             font-size: 1.8rem;
             /*  */
@@ -341,7 +354,7 @@
         }
 
         .section h3 {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 1.4rem;
@@ -355,11 +368,12 @@
         }
 
         #teaching h3 {
-            font-family: 'Crimson Pro', serif;  /* locations stay serif */
-            font-style: italic;
-            font-size: 1.2rem;
+            font-family: 'Source Serif 4', serif;  /* locations (previously 'Crimson Pro', serif) */
+            font-style: normal;  /* was italic */
+            font-variant: small-caps;
+            font-size: 1rem;  /* was 1.2rem */
             font-weight: 500;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;  /* was 1rem; equal to the gap between courses */
         }
 
         .intro-text {
@@ -380,7 +394,7 @@
         }
 
         .paper-title {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             font-size: 1.2rem;
             font-weight: bold;
             color: var(--ink);
@@ -406,12 +420,14 @@
             margin-top: 0rem;
             margin-bottom: 0.7rem;
             /* margin-left: 2em; */
+            font-family: 'IBM Plex Sans', sans-serif;
             font-style: italic;
             font-weight: 400;
             /* font-weight: light; */
         }
 
         .status {
+            font-family: 'Roboto Flex', sans-serif;  /* status stays in the body font */
             font-weight: normal;
             font-style: normal;
             color: var(--muted);
@@ -502,7 +518,7 @@
         }
 
         .education-title {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             font-size: 1.2rem;
             font-weight: bold;
             color: var(--ink);
@@ -510,9 +526,10 @@
         }
 
         .education-institution {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.2rem;
-            font-style: italic;
+            font-family: 'Source Serif 4', serif;  /* previously 'Crimson Pro', serif */
+            font-size: 1rem;  /* was 1.2rem */
+            font-style: normal;  /* was italic */
+            font-variant: small-caps;
             color: var(--blue);
             margin-bottom: 0.5rem;
         }
@@ -568,7 +585,7 @@
         }
 
         .visiting-position .education-institution {
-            font-size: 1.2rem;
+            font-size: 1rem;  /* was 1.2rem */
             margin-bottom: 0.2rem;
         }
 
@@ -775,10 +792,12 @@
         }
 
         .institution-header {
-            font-family: 'Crimson Pro', serif;
-            font-style: italic;
+            font-family: 'Source Serif 4', serif;  /* previously 'Crimson Pro', serif */
+            font-style: normal;  /* was italic */
+            font-variant: small-caps;
             color: var(--blue);
             margin: 1.5rem 0 1rem 0;
+            font-size: 1rem;  /* added: same size as other locations */
         }
 
         .institution-courses {
@@ -787,7 +806,7 @@
         }
 
         .course-entry {
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;  /* was 1rem */
             display: block;
         }
 
