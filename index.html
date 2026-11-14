@@ -77,8 +77,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- full set (previous): <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
     <!-- previous (Roboto + Crimson Pro): <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Crimson+Pro:ital,wght@1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> -->
-    <!-- only the styles in use: Inconsolata bold; Roboto Flex 300–700 + grade 0–150 (variable); IBM Plex Sans italic 400 (journals); Source Serif 4 400 with native small caps (locations), self-hosted below -->
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Roboto+Flex:opsz,wght,GRAD@8..144,300..700,0..150&family=IBM+Plex+Sans:ital,wght@1,400&display=swap" rel="stylesheet">
+    <!-- only the styles in use: JetBrains Mono bold (previously Inconsolata bold); Roboto Flex 300–700 + grade 0–150 (variable); IBM Plex Sans italic 400 (journals); Source Serif 4 400 with native small caps (locations), self-hosted below -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Roboto+Flex:opsz,wght,GRAD@8..144,300..700,0..150&family=IBM+Plex+Sans:ital,wght@1,400&display=swap" rel="stylesheet">
     <!-- Source Serif 4 is self-hosted: the Google Fonts copy lacks the native small caps (smcp) that Adobe's release has -->
     <style>
         @font-face {
@@ -156,7 +156,7 @@
             padding: 7px 10px;
             display: inline-block;
             font-family: 'Roboto Flex', sans-serif;
-            font-weight: 700;
+            font-weight: 650;  /* was 700 */
             font-size: 34px;
             letter-spacing: 0.03em;
         }
@@ -202,7 +202,7 @@
             color: var(--text);
         }
         .essential-info p:last-child {
-            font-family: 'Inconsolata', monospace;
+            font-family: 'JetBrains Mono', monospace;  /* previously 'Inconsolata' */
             font-weight: bold;
         }
 
@@ -634,7 +634,7 @@
         }
 
         .contact-item p.monospace {
-            font-family: 'Inconsolata', monospace;
+            font-family: 'JetBrains Mono', monospace;  /* previously 'Inconsolata' */
             font-weight: bold;
         }
 
@@ -829,9 +829,16 @@
         }
 
         .monospace-inline {
-            font-family: 'Inconsolata', monospace;
+            font-family: 'JetBrains Mono', monospace;  /* previously 'Inconsolata' */
             font-weight: bold;
             display: inline;
+        }
+
+        /* all monospace text: 90% of the size it would otherwise inherit (JetBrains Mono looks larger than Inconsolata) */
+        .essential-info p:last-child,
+        .contact-item p.monospace,
+        .monospace-inline {
+            font-size: 0.9em;
         }
 
     </style>
